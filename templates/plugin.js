@@ -50,7 +50,7 @@ Vue.prototype.$gsap = gsap
       <% if (options.extraPlugins.drawSVG) { %>
         const { DrawSVGPlugin } = require('gsap/DrawSVGPlugin')
         Vue.prototype.$DrawSVGPlugin = DrawSVGPlugin
-gsap.registerPlugin(DrawSVGPlugin);
+        gsap.registerPlugin(DrawSVGPlugin);
       <% } %>
 
 
