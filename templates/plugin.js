@@ -46,6 +46,13 @@ Vue.prototype.$gsap = gsap
         Vue.prototype.$EaselPlugin = EaselPlugin
         gsap.registerPlugin(EaselPlugin)
       <% } %>
+             
+      <% if (options.extraPlugins.drawSVG) { %>
+        const { DrawSVGPlugin } = require('gsap/DrawSVGPlugin')
+        Vue.prototype.$DrawSVGPlugin = DrawSVGPlugin
+gsap.registerPlugin(DrawSVGPlugin);
+      <% } %>
+
 
       <% if (options.extraPlugins.motionPath) { %>
         const { MotionPathPlugin } = require('gsap/MotionPathPlugin')
